@@ -1,10 +1,11 @@
-const axios = require("axios")
+
+import axios from "axios";
 
 class jsonplaceholdersdk{
     constructor(){
         this.baseUrl = "https://jsonplaceholder.typicode.com"
     }
-    async getAllUsers (){
+    async getAllUsers(){
         try {
             const response = await axios.get(`${this.baseUrl}/users`);
             if(response){
@@ -16,7 +17,7 @@ class jsonplaceholdersdk{
         }
        
     }
-    async getOneUser (userId){
+    async getOneUser(userId){
         try {
             const response = await axios.get(`${this.baseUrl}/users/${userId}`);
             if(response){
@@ -28,7 +29,7 @@ class jsonplaceholdersdk{
         }
        
     }
-    async getAllPosts (){
+    async getAllPosts(){
         try {
             const response  = await axios.get(`${this.baseUrl}/posts`)
             if(response){
@@ -41,4 +42,4 @@ class jsonplaceholdersdk{
        
     }
 }
-module.exports = jsonplaceholdersdk
+export default jsonplaceholdersdk

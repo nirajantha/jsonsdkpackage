@@ -16,5 +16,17 @@ class jsonplaceholdersdk{
         }
        
     }
+    async getOneUser (userId){
+        try {
+            const response = await axios.get(`${this.baseUrl}/users/${userId}`);
+            if(response){
+                return response.data;
+            }
+        } catch (error) {
+            throw new Error(`Failed to fetch user: ${error.message}`);
+            
+        }
+       
+    }
 }
 module.exports = jsonplaceholdersdk;

@@ -1,6 +1,6 @@
 {
   "name": "jsonsdkpackage",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "description": "This SDK is use for fetching jsonplaceholder data",
   "main": "index.js",
   "scripts": {

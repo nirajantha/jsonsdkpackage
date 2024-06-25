@@ -1,4 +1,4 @@
-import { axios } from "axios";
+const axios = require("axios")
 
 class jsonplaceholdersdk{
     constructor(){
@@ -28,9 +28,9 @@ class jsonplaceholdersdk{
         }
        
     }
-    async getPosts (){
+    async getAllPosts (){
         try {
-            const response = await axios.get(`${this.baseUrl}/posts`);
+            const response  = await axios.get(`${this.baseUrl}/posts`)
             if(response){
                 return response.data;
             }
@@ -41,4 +41,4 @@ class jsonplaceholdersdk{
        
     }
 }
-export default jsonplaceholdersdk;
+module.exports = jsonplaceholdersdk
